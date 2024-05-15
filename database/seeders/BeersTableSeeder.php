@@ -12,6 +12,8 @@ class BeersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $data_string = file_get_contents('https://api.sampleapis.com/beers/ale');
+        $data = json_decode($data_string);
+        dump($data);
     }
 }
