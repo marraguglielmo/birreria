@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
+            $table->string('price',10);
+            $table->string('name',50);
+            $table->string('slug',50)->unique();
+            $table->decimal('rating_average',3,2);
+            $table->smallInteger('rating_reviews')->unsigned();
+            $table->string('image');
             $table->timestamps();
         });
     }
