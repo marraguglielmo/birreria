@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('home');
     }
 
-    public function nuovaPagina(){
-        return view('nuova-pagina');
+    public function beers()
+    {
+        return view('beers');
     }
 }
